@@ -1,0 +1,4 @@
+slackbot
+tweepy
+sqlite3
+MeCab
