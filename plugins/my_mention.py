@@ -27,9 +27,13 @@ def mention_func(message):
     except:
         message.reply(u'しばらく時間を空けてお試しください')
 
-@listen_to(u'しゃべ')
-def mention_func(message):
-    message.send(tw.gene())
+@listen_to(u'しゃべ(.*)')
+def mention_func(message, something):
+    numList = re.findall('([0-9])',something)
+    temp = 1 if len(numList) == 0 else int(numList[0])
+    temp = temp if temp < 5 else 5
+    for i in range(temp):
+        message.send(tw.gene())
 
 
 @respond_to(u'どうしてだよぉぉぉぉぉ')
