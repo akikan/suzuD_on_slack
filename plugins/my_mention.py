@@ -5,6 +5,7 @@ from slackbot.bot import default_reply  # 該当する応答がない場合に�
 from time import sleep
 from libs import my_functions as tw       # 外部関数の読み込み
 import copy
+import re
 
 # @respond_to('string')     bot宛のメッセージ
 #                           stringは正規表現が可能 「r'string'」
